@@ -6,7 +6,8 @@ import Footer from "@/partials/Footer";
 import Header from "@/partials/Header";
 import Providers from "@/partials/Providers";
 import "@/styles/main.scss";
-import { ChakraProvider } from '@chakra-ui/react'
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter'; // or `v14-appRouter` if you are using Next.js v14
+
 export default function RootLayout({
   children,
 }: {
@@ -60,12 +61,12 @@ export default function RootLayout({
         <Providers>
           <Header />
           <SearchModal />
-          <ChakraProvider>
+          <AppRouterCacheProvider>
 
             
             <main>{children}</main>
           
-          </ChakraProvider>
+          </AppRouterCacheProvider>
           
           <Footer />
         </Providers>

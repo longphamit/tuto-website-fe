@@ -1,19 +1,7 @@
 
 import SeoMeta from '@/partials/SeoMeta'
-import { ShadownBox } from '@/styles/global-style'
 import axios from 'axios';
 import xml2js from 'xml2js'
-import {
-    Table,
-    Thead,
-    Tbody,
-    Tfoot,
-    Tr,
-    Th,
-    Td,
-    TableCaption,
-    TableContainer,
-} from '@chakra-ui/react'
 
 const getMiHongData = async () => {
     const res = await fetch('https://www.mihong.vn/api/v1/gold/prices/current')
@@ -52,61 +40,69 @@ const TyGia = async () => {
 
     return (
         <>
-            
+
             <SeoMeta title='Giá Vàng Hôm Nay' description='Cập nhật giá vàng mới nhất hôm nay' />
-            
-            <div >
-                <TableContainer>
-                    <Table variant='simple'>
-                        <TableCaption>Giá vàng SJC</TableCaption>
-                        <Thead>
-                            <Tr>
-                                <Th>Tiệm vàng</Th>
-                                <Th>Giá mua</Th>
-                                <Th>Giá bán</Th>
-                            </Tr>
-                        </Thead>
-                        <Tbody>
-                            <Tr>
-                                <Td>Vàng Mi Hồng</Td>
-                                <Td>{tygiaMiHongNow_SJC.buyingPrice}</Td>
-                                <Td>{tygiaMiHongNow_SJC.sellingPrice}</Td>
-                            </Tr>
-                            <Tr>
-                                <Td>Công ty Vàng SJC</Td>
-                                <Td>{tygiaSJCNow_SJC.$.buy}.000</Td>
-                                <Td>{tygiaSJCNow_SJC.$.sell}.000</Td>
-                            </Tr>
-                        </Tbody>
 
-                    </Table>
-                </TableContainer>
-                <TableContainer>
-                    <Table variant='simple'>
-                        <TableCaption>Giá vàng nhẫn 9999</TableCaption>
-                        <Thead>
-                            <Tr>
-                                <Th>Tiệm vàng</Th>
-                                <Th>Giá mua</Th>
-                                <Th>Giá bán</Th>
-                            </Tr>
-                        </Thead>
-                        <Tbody>
-                            <Tr>
-                                <Td>Vàng Mi Hồng</Td>
-                                <Td>{tygiaMiHongNow_SJC.buyingPrice}</Td>
-                                <Td>{tygiaMiHongNow_SJC.sellingPrice}</Td>
-                            </Tr>
-                            <Tr>
-                                <Td>Công ty Vàng SJC</Td>
-                                <Td>{tygiaSJCNow_9999.$.buy}.000</Td>
-                                <Td>{tygiaSJCNow_9999.$.sell}.000</Td>
-                            </Tr>
-                        </Tbody>
+            <div className='content'>
+            {/* <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+                    <GridItem  >
+                        <TableContainer >
+                            <Table variant='simple'>
+                                <TableCaption>Giá vàng SJC</TableCaption>
+                                <Thead>
+                                    <Tr>
+                                        <Th>Tiệm vàng</Th>
+                                        <Th>Giá mua</Th>
+                                        <Th>Giá bán</Th>
+                                    </Tr>
+                                </Thead>
+                                <Tbody>
+                                    <Tr>
+                                        <Td>Vàng Mi Hồng</Td>
+                                        <Td>{tygiaMiHongNow_SJC.buyingPrice}</Td>
+                                        <Td>{tygiaMiHongNow_SJC.sellingPrice}</Td>
+                                    </Tr>
+                                    <Tr>
+                                        <Td>Công ty Vàng SJC</Td>
+                                        <Td>{tygiaSJCNow_SJC.$.buy}.000</Td>
+                                        <Td>{tygiaSJCNow_SJC.$.sell}.000</Td>
+                                    </Tr>
+                                </Tbody>
 
-                    </Table>
-                </TableContainer>
-                
+                            </Table>
+                        </TableContainer>
+                    </GridItem>
+                    <GridItem >
+                        <TableContainer>
+                            <Table variant='simple'>
+                                <TableCaption>Giá vàng nhẫn 9999</TableCaption>
+                                <Thead>
+                                    <Tr>
+                                        <Th>Tiệm vàng</Th>
+                                        <Th>Giá mua</Th>
+                                        <Th>Giá bán</Th>
+                                    </Tr>
+                                </Thead>
+                                <Tbody>
+                                    <Tr>
+                                        <Td>Vàng Mi Hồng</Td>
+                                        <Td>{tygiaMiHongNow_SJC.buyingPrice}</Td>
+                                        <Td>{tygiaMiHongNow_SJC.sellingPrice}</Td>
+                                    </Tr>
+                                    <Tr>
+                                        <Td>Công ty Vàng SJC</Td>
+                                        <Td>{tygiaSJCNow_9999.$.buy}.000</Td>
+                                        <Td>{tygiaSJCNow_9999.$.sell}.000</Td>
+                                    </Tr>
+                                </Tbody>
+
+                            </Table>
+                        </TableContainer>
+                    </GridItem>
+                </SimpleGrid> */}
+
+
+
             </div>
         </>
     )
