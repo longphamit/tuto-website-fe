@@ -11,6 +11,16 @@ banner:
 
 # Features
 features:
+  - title: "Công cụ"
+    image: "/images/service-9.png"
+    content: "Chúng tôi mong muốn cung cấp các công cụ phục vụ nhu cầu cuộc sống của bạn"
+    bulletpoints:
+      - "Kiểm tra tỷ giá vàng hôm nay"
+      - "Định dạng PDF"
+    button:
+      enable: true
+      label: "Đến xem"
+      link: "/tool/tygia"
   - title: "Kiến thức"
     image: "/images/service-6.png"
     content: "Chúng tôi chia sẻ những kiến thức về nhiều lĩnh vực trong cuộc sống mà chúng tôi học hỏi, nghiên cứu được trong quá trình học tập, làm việc và trải nghiệm cuộc sống."

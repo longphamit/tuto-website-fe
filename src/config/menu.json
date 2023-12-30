@@ -15,20 +15,12 @@
     },
     {
       "name": "Công cụ",
-      "url": "/elements"
-    },
-    {
-      "name": "Về chúng tôi",
-      "url": "/about"
-    },
-    {
-      "name": "Pages",
       "url": "",
       "hasChildren": true,
       "children": [
         {
-          "name": "Contact",
-          "url": "/contact"
+          "name": "Xem Giá Vàng",
+          "url": "/tool/tygia"
         },
         
         {
@@ -48,6 +40,10 @@
           "url": "/404"
         }
       ]
+    },
+    {
+      "name": "Về chúng tôi",
+      "url": "/about"
     }
   ],
   "footer": [
