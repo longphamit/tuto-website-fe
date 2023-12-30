@@ -35,7 +35,7 @@ const TyGia = async () => {
     // Mi hong
     const tygiaMiHong = await getMiHongData()
     const tygiaMiHongNow_SJC = tygiaMiHong.data[0];
-
+    const tygiaMiHongNow_9999 = tygiaMiHong.data[1];
 
     //
    
@@ -55,7 +55,7 @@ const TyGia = async () => {
                                     <TableHead>
                                         <TableRow>
                                             <TableCell className='mb-8'><h5>Tiệm vàng</h5></TableCell>
-                                            <TableCell align="right"><h5>Giá Mua</h5></TableCell>
+                                            <TableCell align="right"><h5>Giá mua</h5></TableCell>
                                             <TableCell align="right"><h5>Giá bán</h5></TableCell>
                                         </TableRow>
                                     </TableHead>
@@ -86,9 +86,9 @@ const TyGia = async () => {
                                 <Table sx={{ width: "100%", display: "table", tableLayout: "fixed" }} aria-label="simple table">
                                     <TableHead>
                                         <TableRow>
-                                            <TableCell><h6>Tiệm vàng</h6></TableCell>
-                                            <TableCell align="right"><h6>Giá Mua</h6></TableCell>
-                                            <TableCell align="right"><h6>Giá bán</h6></TableCell>
+                                            <TableCell><h5>Tiệm vàng</h5></TableCell>
+                                            <TableCell align="right"><h5>Giá mua</h5></TableCell>
+                                            <TableCell align="right"><h5>Giá bán</h5></TableCell>
 
                                         </TableRow>
                                     </TableHead>
@@ -97,8 +97,8 @@ const TyGia = async () => {
                                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                                         >
                                             <TableCell ><h6>Mi Hồng</h6></TableCell>
-                                            <TableCell align="right"><h6>{formatToCurrency(tygiaMiHongNow_SJC.buyingPrice * 10)}</h6></TableCell>
-                                            <TableCell align="right"><h6>{formatToCurrency(tygiaMiHongNow_SJC.sellingPrice * 10)}</h6></TableCell>
+                                            <TableCell align="right"><h6>{formatToCurrency(tygiaMiHongNow_9999.buyingPrice * 10)}</h6></TableCell>
+                                            <TableCell align="right"><h6>{formatToCurrency(tygiaMiHongNow_9999.sellingPrice * 10)}</h6></TableCell>
 
                                         </TableRow>
                                         <TableRow
@@ -106,8 +106,8 @@ const TyGia = async () => {
                                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                                         >
                                             <TableCell><h6>Công ty SJC</h6></TableCell>
-                                            <TableCell align="right" ><h6>{tygiaSJCNow_SJC.$.buy}.000</h6></TableCell>
-                                            <TableCell align="right"><h6>{tygiaSJCNow_SJC.$.sell}.000</h6></TableCell>
+                                            <TableCell align="right" ><h6>{tygiaSJCNow_9999.$.buy}.000</h6></TableCell>
+                                            <TableCell align="right"><h6>{tygiaSJCNow_9999.$.sell}.000</h6></TableCell>
 
                                         </TableRow>
                                     </TableBody>

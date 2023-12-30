@@ -24,14 +24,14 @@ const Home = () => {
 
   return (
     <>
-      <SeoMeta />
+      <SeoMeta title="TutoBlog" description="My World"/>
       <section >
         <div className="container">
           <div className="row justify-center">
             <div className="text-center lg:col-7">
               <h1
                 className="mb-4"
-                style={{color:colorTitle}}
+                style={{color:colorTitle,padding:10}}
                 dangerouslySetInnerHTML={markdownify(banner.title)}
               />
               <p

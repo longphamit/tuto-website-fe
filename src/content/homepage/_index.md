@@ -7,7 +7,7 @@ banner:
   button:
     enable: true
     label: "Get Started For Free"
-    link: "https://github.com/zeon-studio/nextplate"
+    link: "#"
 
 # Features
 features:
@@ -15,7 +15,7 @@ features:
     image: "/images/service-9.png"
     content: "Chúng tôi mong muốn cung cấp các công cụ phục vụ nhu cầu cuộc sống của bạn"
     bulletpoints:
-      - "Kiểm tra tỷ giá vàng hôm nay"
+      - "Xem giá vàng hôm nay"
       - "Định dạng PDF"
     button:
       enable: true
@@ -43,18 +43,5 @@ features:
     button:
       enable: true
       label: "Đến xem"
-      link: "https://github.com/zeon-studio/nextplate"
-
-  - title: "The Top Reasons to Choose Next for Your Next Project"
-    image: "/images/service-3.png"
-    content: "With Next, you can build modern and content-focused websites without sacrificing performance or ease of use."
-    bulletpoints:
-      - "Instantly load static sites for better user experience and SEO."
-      - "Intuitive syntax and support for popular frameworks make learning and using Next a breeze."
-      - "Use any front-end library or framework, or build custom components, for any project size."
-      - "Built on cutting-edge technology to keep your projects up-to-date with the latest web standards."
-    button:
-      enable: false
-      label: ""
-      link: ""
+      link: "#"
 ---
