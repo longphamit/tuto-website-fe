@@ -11,6 +11,8 @@
   @apply mx-auto max-w-[1320px] px-4;
 }
 
+
+
 // form style
 .form-input {
   @apply w-full rounded border-transparent bg-theme-light px-6 py-4 text-dark placeholder:text-light focus:border-primary focus:ring-transparent dark:border-darkmode-border dark:bg-darkmode-theme-light dark:text-darkmode-light;
@@ -175,4 +177,9 @@
   @apply prose-th:relative prose-th:z-10 prose-th:px-4 prose-th:py-[18px] prose-th:text-dark prose-th:dark:text-darkmode-text;
   @apply prose-tr:border-border prose-tr:dark:border-darkmode-border;
   @apply prose-td:relative prose-td:z-10 prose-td:px-3 prose-td:py-[18px] prose-td:dark:text-darkmode-text;
+}
+
+
+.boxshadown {
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
 }

@@ -6,7 +6,7 @@ import Footer from "@/partials/Footer";
 import Header from "@/partials/Header";
 import Providers from "@/partials/Providers";
 import "@/styles/main.scss";
-
+import { ChakraProvider } from '@chakra-ui/react'
 export default function RootLayout({
   children,
 }: {
@@ -60,7 +60,13 @@ export default function RootLayout({
         <Providers>
           <Header />
           <SearchModal />
-          <main>{children}</main>
+          <ChakraProvider>
+
+            
+            <main>{children}</main>
+          
+          </ChakraProvider>
+          
           <Footer />
         </Providers>
       </body>
