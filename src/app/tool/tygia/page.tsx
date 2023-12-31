@@ -87,7 +87,7 @@ const TyGia = async () => {
                                     <TableHead>
                                         <TableRow>
                                             <TableCell><h5>Tiệm vàng</h5></TableCell>
-                                            <TableCell align="right"><h5>Giá mua</h5></TableCell>
+                                            <TableCell align="right"><h5>Giá mua </h5></TableCell>
                                             <TableCell align="right"><h5>Giá bán</h5></TableCell>
 
                                         </TableRow>
