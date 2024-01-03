@@ -21,23 +21,6 @@
         {
           "name": "Xem Giá Vàng",
           "url": "/tool/tygia"
-        },
-        
-        {
-          "name": "Authors",
-          "url": "/authors"
-        },
-        {
-          "name": "Categories",
-          "url": "/categories"
-        },
-        {
-          "name": "Tags",
-          "url": "/tags"
-        },
-        {
-          "name": "404 Page",
-          "url": "/404"
         }
       ]
     },
