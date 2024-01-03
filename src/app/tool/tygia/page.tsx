@@ -4,7 +4,8 @@ import axios from 'axios';
 import xml2js from 'xml2js'
 import Grid from '@mui/material/Grid';
 import { Box, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Toolbar, Typography } from '@mui/material';
-
+import { RegularPage } from "@/types";
+import { getListPage } from "@/lib/contentParser";
 const getMiHongData = async () => {
     const res = await fetch('https://www.mihong.vn/api/v1/gold/prices/current',{next:{revalidate:3600}})
     // The return value is *not* serialized
@@ -22,6 +23,12 @@ const formatToCurrency = (number: any): string => {
 };
 
 const TyGia = async () => {
+    // SEO
+    const dataSEO: RegularPage = getListPage("seo/tygia.md");
+    const { frontmatter } = dataSEO;
+    const { title, description } = frontmatter;
+
+
     // SJC 
     let tygiaSJCNow_SJC: any;
     let tygiaSJCNow_9999: any;
@@ -43,7 +50,7 @@ const TyGia = async () => {
     return (
         <>
 
-            <SeoMeta title='Giá Vàng Hôm Nay' description='Cập nhật giá vàng mới nhất hôm nay' />
+            <SeoMeta title={title} description={description} />
             <div className='container'>
    
                 <div className=' content' style={{ padding: 20, height: '100vh' }}>
