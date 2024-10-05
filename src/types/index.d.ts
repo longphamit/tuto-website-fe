@@ -48,10 +48,14 @@ export type Author = {
 export type Feature = {
   button: button;
   image: string;
-  bulletpoints: string[];
+  bulletpoints: [BulletpointPart] ;
   content: string;
   title: string;
 };
+export type BulletpointPart={
+    name:string;
+    link:string;
+}
 
 export type Testimonial = {
   name: string;

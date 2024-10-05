@@ -4,7 +4,7 @@ import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/CallToAction";
 import SeoMeta from "@/partials/SeoMeta";
 import Testimonials from "@/partials/Testimonials";
-import { Button, Feature } from "@/types";
+import {BulletpointPart, Button, Feature} from "@/types";
 import Link from "next/link";
 import { FaCheck } from "react-icons/fa/index.js";
 
@@ -12,7 +12,7 @@ const Home = () => {
   const homepage = getListPage("homepage/_index.md");
   const testimonial = getListPage("sections/testimonial.md");
   const callToAction = getListPage("sections/call-to-action.md");
-  const colorTitle="#34b4eb";
+  const colorTitle="#000";
   const { frontmatter } = homepage;
   const {
     banner,
@@ -21,7 +21,7 @@ const Home = () => {
     banner: { title: string; image: string; content?: string; button?: Button };
     features: Feature[];
   } = frontmatter;
-
+  console.log(features)
   return (
     <>
       <SeoMeta title="TutoBlog" description="My World"/>
@@ -31,7 +31,6 @@ const Home = () => {
             <div className="text-center lg:col-7">
               <h1
                 className="mb-4"
-                style={{color:colorTitle,padding:10}}
                 dangerouslySetInnerHTML={markdownify(banner.title)}
               />
               <p
@@ -82,7 +81,7 @@ const Home = () => {
               >
                 <h2
                   className="mb-4"
-                  style={{color:colorTitle}}
+
                   dangerouslySetInnerHTML={markdownify(feature.title)}
                 />
                 <p
@@ -90,21 +89,20 @@ const Home = () => {
                   dangerouslySetInnerHTML={markdownify(feature.content)}
                 />
                 <ul>
-                  {feature.bulletpoints.map((bullet: string) => (
-                    <li className="relative mb-4 pl-6" key={bullet}>
-                      <FaCheck className={"absolute left-0 top-1.5"} />
-                      <span dangerouslySetInnerHTML={markdownify(bullet)} />
+                  {feature.bulletpoints.map((bullet: any) => (
+                    <li className="relative mb-4 pl-6" key={bullet.part.name}>
+                      <Link
+                          className="btn btn-primary mt-5"
+                          href={bullet.part.link}
+                          target={"_blank"}
+
+                      >
+                        <span dangerouslySetInnerHTML={markdownify(bullet.part.name)}/>
+                      </Link>
                     </li>
                   ))}
                 </ul>
-                {feature.button.enable && (
-                  <Link
-                    className="btn btn-primary mt-5"
-                    href={feature.button.link}
-                  >
-                    {feature.button.label}
-                  </Link>
-                )}
+
               </div>
             </div>
           </div>

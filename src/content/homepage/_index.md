@@ -15,8 +15,12 @@ features:
     image: "/images/service-9.png"
     content: "Chúng tôi mong muốn cung cấp các công cụ phục vụ nhu cầu cuộc sống của bạn"
     bulletpoints:
-      - "Xem giá vàng hôm nay"
-      - "Định dạng PDF"
+      - part:
+          name: "Xem giá vàng"
+          link: /tool/tygia
+      - part:
+          name: "Vẽ biểu đồ"
+          link: https://tomchart.com
     button:
       enable: true
       label: "Đến xem"
@@ -25,21 +29,12 @@ features:
     image: "/images/service-6.png"
     content: "Chúng tôi chia sẻ những kiến thức về nhiều lĩnh vực trong cuộc sống mà chúng tôi học hỏi, nghiên cứu được trong quá trình học tập, làm việc và trải nghiệm cuộc sống."
     bulletpoints:
-      - "Công nghệ thông tin"
-      - "Công nghiệp thực phẩm"
-      - "Sức khỏe"
-    button:
-      enable: true
-      label: "Đến xem"
-      link: "#"
-
-  - title: "Kỷ niệm"
-    image: "/images/service-5.png"
-    content: "Nơi đây chúng tôi cũng lưu trữ những kỷ niệm đẹp mà chúng tôi đã trải qua."
-    bulletpoints:
-      - "Những hành trình khám phá, du lịch."
-      - "Những kỷ niệm bên gia đình"
-      - "Những kỷ niệm trong công việc"
+      - part:
+          name: "Công nghệ thông tin"
+          link: /tool/tygia
+      - part:
+          name: "Thực phẩm"
+          link: https://tomchart.com
     button:
       enable: true
       label: "Đến xem"
